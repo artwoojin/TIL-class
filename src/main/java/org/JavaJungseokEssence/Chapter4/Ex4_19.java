@@ -1,4 +1,4 @@
-package org.Chapter4;
+package org.JavaJungseokEssence.Chapter4;
 
 public class Ex4_19 {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Ex4_19 {
                     // break;
                     // continue Loop1;
                     // continue;
-                    System.out.println(i + "*" + j + "=" + i*j);
+                    //System.out.println(i + "*" + j + "=" + i*j);
                 }   // end of for i
                 System.out.println();
             }   // end of Loop1
