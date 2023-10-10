@@ -1,4 +1,4 @@
-package org.JavaJungseokEssence.Chaptrer8;
+package org.JavaJungseokEssence.Chapter8;
 
 import java.io.File;
 

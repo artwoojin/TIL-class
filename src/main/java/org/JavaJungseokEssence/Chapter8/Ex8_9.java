@@ -1,4 +1,4 @@
-package org.JavaJungseokEssence.Chaptrer8;
+package org.JavaJungseokEssence.Chapter8;
 
 class Ex8_9 {
     public static void main(String args[]) throws Exception{
