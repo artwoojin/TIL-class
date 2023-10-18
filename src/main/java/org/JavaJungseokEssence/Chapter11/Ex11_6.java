@@ -1,6 +1,5 @@
 package org.JavaJungseokEssence.Chapter11;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 class Ex11_6 {
