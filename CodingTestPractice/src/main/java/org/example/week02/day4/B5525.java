@@ -21,17 +21,17 @@ public class B5525 {
             }
         }
 
-        int cnt = 0;
+        int count = 0;
         int result = 0;
         // 'I' 문자의 인덱스 배열을 순회하며 연속된 패턴의 개수를 계산
         for (int i = 1; i < indexArr; ++i) {
             if (index[i] - index[i - 1] == 2) {
-                cnt++;
+                count++;
             } else {
-                cnt = 0;
+                count = 0;
             }
             // 연속된 패턴의 개수가 N 이상일 경우 result 수 증가
-            if (cnt >= N) {
+            if (count >= N) {
                 result++;
             }
         }
