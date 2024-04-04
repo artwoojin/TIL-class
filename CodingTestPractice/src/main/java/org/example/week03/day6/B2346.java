@@ -12,6 +12,7 @@ public class B2346 {
      * 2. 첫 번째 풍선을 터뜨리고, 해당 풍선 안에 적힌 숫자만큼 이동
      * 3. 선택한 풍선의 번호를 결과에 추가하고, 다음 풍선을 현재 풍선으로 설정
      * 4. 남아있는 풍선이 없을 때까지 2~3번 과정을 반복하고 결과 출력
+     * 미완성 코드
      * */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
