@@ -1,4 +1,4 @@
-package org.example.week04;
+package org.example.week04.day11;
 
 public class B11559 {
     /* --> BFS + 구현 : 이런 유형 다빈출
