@@ -1,5 +1,11 @@
 package org.example.week04.day13;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class B13164 {
     /*
     ***** 문제 설명 : 행복 유치원
@@ -18,8 +24,32 @@ public class B13164 {
     *     원생의 키는 10의 9승을 넘지 않는 자연수이다.
     *     이 때 티셔츠 만드는 비용이 최소가 되도록 K개의 조로 나눴을 때, 티셔츠 만드는 비용을 출력한다.
     *
-    ***** 풀이 설계 : 우선순위 큐에 원생들의 키를 저장한다.
-    *
+    ***** 풀이 설계 : Arraylist에 원생들의 키와 키 차이를 저장하고, 오름차순으로 정렬해서
+    *     가장 키 차이가 많이 나는 K-1를 제외하고 나머지 값들을 합한다.
     * */
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] NK = br.readLine().split(" ");
+        int N = Integer.parseInt(NK[0]);
+        int K = Integer.parseInt(NK[1]);
+        String[] heights = br.readLine().split(" ");
+        ArrayList<Integer> height = new ArrayList<>();
+        ArrayList<Integer> difference = new ArrayList<>();
 
+        for (String heightStr : heights) {
+            height.add(Integer.parseInt(heightStr));
+        }
+        Collections.sort(height);
+
+        for (int i = 0; i < N - 1; i++) {
+            difference.add(height.get(i + 1) - height.get(i));
+        }
+        Collections.sort(difference);
+
+        int result = 0;
+        for (int i = 0; i < N - K; i++) {
+            result += difference.get(i);
+        }
+        System.out.println(result);
+    }
 }

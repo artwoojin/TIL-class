@@ -1,5 +1,9 @@
 package org.example.week04.day12;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class B8911 {
     /*
     ***** 문제 설명 : 상근이는 2차원 평면 위에서 움직이는 거북이 로봇이 있다.
@@ -16,9 +20,34 @@ public class B8911 {
     *     각 테스트 케이스는 한 줄로 이루어져 있고, 컨트롤 프로그램이 입력된다.
     *     프로그램은 항상 문제의 설명에 나와있는 네 가지 명령으로만 이루어져 있고, 길이는 500을 넘지 않는다.
     *     각 테스트 케이스에 대해서 거북이가 이동한 영역을 모두 포함하는 가장 작은 직사각형의 넓이를 출력한다.
-    ***** 풀이 설계 : 
+    ***** 풀이 설계 : 좌우 방향을 어떻게 이동할 지에 대해서 막혔습니다.
     * */
-    public static void main(String[] args) {
 
+    static int[] dx = {-1, 0, 0, 1};
+    static int[] dy = {0, 1, 1, 0};
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        int T = Integer.parseInt(br.readLine());
+        for (int i = 0; i < T; i++) {
+            int x = 0, y = 0, nowX = 0, nowY = 0, direction = 0;
+            String command = br.readLine();
+            for (int j = 0; j < command.length(); j++) {
+                char c = command.charAt(j);
+
+                if (c == 'F') {
+                    nowX = nowX + dx[direction];
+                    nowY = nowY + dy[direction];
+                } else if (c == 'B') {
+                    nowX = nowX - dx[direction];
+                    nowY = nowY - dy[direction];
+                } else if (c == 'L') {
+                    // todo
+                } else if (c == 'R') {
+                    // todo
+                }
+
+            }
+        }
     }
 }
